@@ -1,7 +1,7 @@
-<app-tab-control [selectedIndex]="selectedIndex">
+<app-tab-control #tabControl>
   <app-tab-page header="Page 1">Content 1</app-tab-page>
   <app-tab-page header="Page 2">Content 2</app-tab-page>
   <app-tab-page header="Page 3">Content 3</app-tab-page>
 </app-tab-control>
 
-<button (click)="selectedIndex = 0">Select first page</button>
+<button (click)="tabControl.selectedIndex = 0">Select first page</button>

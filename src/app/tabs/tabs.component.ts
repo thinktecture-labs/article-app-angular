@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.component.html',
 })
-export class TabsComponent implements OnInit {
-  selectedIndex = 0;
+export class TabsComponent {
 }
