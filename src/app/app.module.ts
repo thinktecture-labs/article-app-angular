@@ -16,6 +16,7 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
 import { ArticleFilterTableComponent } from './article-filter-table/article-filter-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ArticleThirdPartyTableComponent } from './article-third-party-table/article-third-party-table.component';
+import { VatPipe } from './bindings/vat.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ArticleThirdPartyTableComponent } from './article-third-party-table/art
     TabPageComponent,
     ArticleDetailComponent,
     ArticleFilterTableComponent,
-    ArticleThirdPartyTableComponent
+    ArticleThirdPartyTableComponent,
+    VatPipe
   ],
   imports: [
     BrowserModule,
