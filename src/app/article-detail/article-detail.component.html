@@ -1,20 +1,28 @@
-<dl *ngIf="(article$ | async) as article">
-  <dt>Title</dt>
-  <dd>{{ article.title }}</dd>
-  <dt>Manufacturer</dt>
-  <dd>{{ article.manufacturer }}</dd>
-  <dt>Price</dt>
-  <dd>{{ article.price | currency:'EUR' }}</dd>
-  <dt>Category</dt>
-  <dd>
-    <select [(ngModel)]="article.category" (ngModelChange)="categoryChange.next($event)">
-      <option *ngFor="let category of (categories$ | async)" [ngValue]="category.id">{{ category.key }}</option>
-    </select>
-  </dd>
-  <dt>Subcategory</dt>
-  <dd>
-    <select [(ngModel)]="article.subcategory">
-      <option *ngFor="let category of (subcategories$ | async)" [ngValue]="category.id">{{ category.key }}</option>
-    </select>
-  </dd>
-</dl>
+<ng-container *ngIf="(article$ | async) as article">
+  <ul>
+    <li *ngIf="article.previousId"><a [routerLink]="['..', article.previousId]">Previous</a></li>
+    <li><a [routerLink]="['..']">Back to master</a></li>
+    <li *ngIf="article.nextId"><a [routerLink]="['..', article.nextId]">Next</a></li>
+  </ul>
+
+  <dl>
+    <dt>Title</dt>
+    <dd>{{ article.title }}</dd>
+    <dt>Manufacturer</dt>
+    <dd>{{ article.manufacturer }}</dd>
+    <dt>Price</dt>
+    <dd>{{ article.price | currency:'EUR' }}</dd>
+    <dt>Category</dt>
+    <dd>
+      <select [(ngModel)]="article.category" (ngModelChange)="categoryChange.next($event)">
+        <option *ngFor="let category of (categories$ | async)" [ngValue]="category.id">{{ category.key }}</option>
+      </select>
+    </dd>
+    <dt>Subcategory</dt>
+    <dd>
+      <select [(ngModel)]="article.subcategory">
+        <option *ngFor="let category of (subcategories$ | async)" [ngValue]="category.id">{{ category.key }}</option>
+      </select>
+    </dd>
+  </dl>
+</ng-container>
