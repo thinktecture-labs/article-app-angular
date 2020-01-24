@@ -11,6 +11,7 @@ import { BindingsComponent } from './bindings/bindings.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TabControlComponent } from './tabs/tab-control/tab-control.component';
 import { TabPageComponent } from './tabs/tab-page/tab-page.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TabPageComponent } from './tabs/tab-page/tab-page.component';
     ArticleTableComponent,
     TabsComponent,
     TabControlComponent,
-    TabPageComponent
+    TabPageComponent,
+    ArticleDetailComponent,
   ],
   imports: [
     BrowserModule,

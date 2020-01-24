@@ -8,7 +8,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let article of articles">
-    <td>{{ article.title }}</td>
+    <td><a [routerLink]="article.id">{{ article.title }}</a></td>
     <td>{{ article.manufacturer }}</td>
     <td>{{ article.price | currency:'EUR' }}</td>
   </tr>

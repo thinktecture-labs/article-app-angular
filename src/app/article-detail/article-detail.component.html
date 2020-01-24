@@ -1,0 +1,12 @@
+<dl *ngIf="(article$ | async) as article">
+  <dt>Title</dt>
+  <dd>{{ article.title }}</dd>
+  <dt>Manufacturer</dt>
+  <dd>{{ article.manufacturer }}</dd>
+  <dt>Price</dt>
+  <dd>{{ article.price | currency:'EUR' }}</dd>
+  <dt>Category</dt>
+  <dd>{{ article.category }}</dd>
+  <dt>Subcategory</dt>
+  <dd>{{ article.subcategory }}</dd>
+</dl>

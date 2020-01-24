@@ -12,7 +12,7 @@ export class ArticleTableComponent implements OnInit {
   constructor(private readonly articleService: ArticleService) {
   }
 
-  async ngOnInit(): Promise<void> {
+  public async ngOnInit(): Promise<void> {
     this.articles = await this.articleService.getAll();
   }
 }
