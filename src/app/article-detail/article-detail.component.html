@@ -6,7 +6,15 @@
   <dt>Price</dt>
   <dd>{{ article.price | currency:'EUR' }}</dd>
   <dt>Category</dt>
-  <dd>{{ article.category }}</dd>
+  <dd>
+    <select [(ngModel)]="article.category" (ngModelChange)="categoryChange.next($event)">
+      <option *ngFor="let category of (categories$ | async)" [ngValue]="category.id">{{ category.key }}</option>
+    </select>
+  </dd>
   <dt>Subcategory</dt>
-  <dd>{{ article.subcategory }}</dd>
+  <dd>
+    <select [(ngModel)]="article.subcategory">
+      <option *ngFor="let category of (subcategories$ | async)" [ngValue]="category.id">{{ category.key }}</option>
+    </select>
+  </dd>
 </dl>
