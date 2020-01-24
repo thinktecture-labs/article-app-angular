@@ -14,6 +14,7 @@ import { TabControlComponent } from './tabs/tab-control/tab-control.component';
 import { TabPageComponent } from './tabs/tab-page/tab-page.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ArticleThirdPartyTableComponent } from './article-third-party-table/article-third-party-table.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TabControlComponent,
     TabPageComponent,
     ArticleDetailComponent,
+    ArticleThirdPartyTableComponent
   ],
   imports: [
     BrowserModule,
