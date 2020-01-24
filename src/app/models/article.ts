@@ -5,4 +5,6 @@ export interface Article {
   category: string;
   subcategory: string;
   price: number;
+  previousId?: number;
+  nextId?: number;
 }
