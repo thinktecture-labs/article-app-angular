@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,6 +13,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { TabControlComponent } from './tabs/tab-control/tab-control.component';
 import { TabPageComponent } from './tabs/tab-page/tab-page.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ArticleDetailComponent } from './article-detail/article-detail.componen
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
