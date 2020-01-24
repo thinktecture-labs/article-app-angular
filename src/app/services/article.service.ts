@@ -14,6 +14,10 @@ export class ArticleService {
     return this.httpClient.get<Article[]>(this.baseUrl).toPromise();
   }
 
+  search(query: string = ''): Promise<Article[]> {
+    return this.httpClient.get<Article[]>(this.baseUrl, {params: {q: query}}).toPromise();
+  }
+
   get(id: number): Promise<Article> {
     return this.httpClient.get<Article>(this.baseUrl + '/' + id).toPromise();
   }

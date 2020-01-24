@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import { ArticleFilterTableComponent } from './article-filter-table/article-filter-table.component';
 import { ArticleThirdPartyTableComponent } from './article-third-party-table/article-third-party-table.component';
 import { BindingsComponent } from './bindings/bindings.component';
 import { DemoSelectorComponent } from './demo-selector/demo-selector.component';
@@ -22,6 +23,12 @@ const routes: Routes = [{
   component: ArticleTableComponent,
 }, {
   path: 'articles/:id',
+  component: ArticleDetailComponent,
+}, {
+  path: 'articles-filter',
+  component: ArticleFilterTableComponent,
+}, {
+  path: 'articles-filter/:id',
   component: ArticleDetailComponent,
 }, {
   path: 'articles-third-party',

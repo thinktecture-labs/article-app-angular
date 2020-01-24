@@ -1,0 +1,18 @@
+<input type="text" #input (input)="searchQueryUpdated.next(input.value)">
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Manufacturer</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let article of (articles$ | async)">
+    <td><a [routerLink]="article.id">{{ article.title }}</a></td>
+    <td>{{ article.manufacturer }}</td>
+    <td>{{ article.price | currency:'EUR' }}</td>
+  </tr>
+  </tbody>
+</table>

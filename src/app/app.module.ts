@@ -13,6 +13,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { TabControlComponent } from './tabs/tab-control/tab-control.component';
 import { TabPageComponent } from './tabs/tab-page/tab-page.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import { ArticleFilterTableComponent } from './article-filter-table/article-filter-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ArticleThirdPartyTableComponent } from './article-third-party-table/article-third-party-table.component';
 
@@ -26,6 +27,7 @@ import { ArticleThirdPartyTableComponent } from './article-third-party-table/art
     TabControlComponent,
     TabPageComponent,
     ArticleDetailComponent,
+    ArticleFilterTableComponent,
     ArticleThirdPartyTableComponent
   ],
   imports: [
