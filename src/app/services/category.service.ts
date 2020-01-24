@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Category } from '../models/category';
 
 @Injectable({
@@ -10,11 +11,11 @@ export class CategoryService {
 
   constructor(private readonly httpClient: HttpClient) {}
 
-  getCategories(): Promise<Category[]> {
-    return this.httpClient.get<Category[]>(this.baseUrl).toPromise();
+  getCategories(): Observable<Category[]> {
+    return this.httpClient.get<Category[]>(this.baseUrl);
   }
 
-  getSubcategories(id: string): Promise<Category[]> {
-    return this.httpClient.get<Category[]>(this.baseUrl + '/' + id).toPromise();
+  getSubcategories(id: string): Observable<Category[]> {
+    return this.httpClient.get<Category[]>(this.baseUrl + '/' + id);
   }
 }
