@@ -1,0 +1,5 @@
+<input type="text" [value]="searchQuery" (input)="searchQuery = $event.target.value">
+
+<div>{{ searchQuery }}</div>
+
+<input type="text" [(ngModel)]="searchQuery">

@@ -6,11 +6,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoSelectorComponent } from './demo-selector/demo-selector.component';
+import { BindingsComponent } from './bindings/bindings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoSelectorComponent,
+    BindingsComponent,
   ],
   imports: [
     BrowserModule,
