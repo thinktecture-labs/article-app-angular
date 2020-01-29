@@ -14,7 +14,7 @@
     <dd>{{ article.price | currency:'EUR' }}</dd>
     <dt>Category</dt>
     <dd>
-      <select [(ngModel)]="article.category" (ngModelChange)="categoryChange.next($event)">
+      <select [(ngModel)]="article.category" (ngModelChange)="changeCategory($event)">
         <option *ngFor="let category of (categories$ | async)" [ngValue]="category.id">{{ category.key }}</option>
       </select>
     </dd>
