@@ -26,8 +26,7 @@ export class ArticleDetailComponent implements OnInit {
 
   public ngOnInit(): void {
     this.article$ = this.activatedRoute.params.pipe(
-      map(params => params.id),
-      switchMap(id => this.articleService.get(id)),
+      switchMap(params => this.articleService.get(params.id)),
     );
 
     this.categories$ = this.categoryService.getCategories();
