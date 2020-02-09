@@ -1,13 +1,14 @@
 import { Component, ContentChildren, Input, QueryList } from '@angular/core';
-import { TabPageComponent } from '../tab-page/tab-page.component';
+import { TabItemComponent } from '../tab-item/tab-item.component';
 
 @Component({
-  selector: 'app-tab-control',
+  // tslint:disable-next-line:component-selector
+  selector: 'tab-control',
   templateUrl: './tab-control.component.html',
   styleUrls: ['./tab-control.component.css'],
 })
 export class TabControlComponent {
   @Input() selectedIndex = 0;
 
-  @ContentChildren(TabPageComponent) pages: QueryList<TabPageComponent>;
+  @ContentChildren(TabItemComponent) pages: QueryList<TabItemComponent>;
 }

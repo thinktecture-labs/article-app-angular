@@ -1,7 +1,7 @@
-<app-tab-control #tabControl>
-  <app-tab-page header="Page 1">Content 1</app-tab-page>
-  <app-tab-page header="Page 2">Content 2</app-tab-page>
-  <app-tab-page header="Page 3">Content 3</app-tab-page>
-</app-tab-control>
+<tab-control #tabControl>
+  <tab-item header="Page 1">Content 1</tab-item>
+  <tab-item header="Page 2">Content 2</tab-item>
+  <tab-item header="Page 3">Content 3</tab-item>
+</tab-control>
 
 <button (click)="tabControl.selectedIndex = 0">Select first page</button>

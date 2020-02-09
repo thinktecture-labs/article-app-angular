@@ -11,7 +11,7 @@ import { DemoSelectorComponent } from './demo-selector/demo-selector.component';
 import { BindingsComponent } from './bindings/bindings.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TabControlComponent } from './tabs/tab-control/tab-control.component';
-import { TabPageComponent } from './tabs/tab-page/tab-page.component';
+import { TabItemComponent } from './tabs/tab-item/tab-item.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import { ArticleFilterTableComponent } from './article-filter-table/article-filter-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,7 +26,7 @@ import { VatPipe } from './bindings/vat.pipe';
     ArticleTableComponent,
     TabsComponent,
     TabControlComponent,
-    TabPageComponent,
+    TabItemComponent,
     ArticleDetailComponent,
     ArticleFilterTableComponent,
     ArticleThirdPartyTableComponent,
