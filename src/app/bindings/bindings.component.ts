@@ -5,5 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './bindings.component.html',
 })
 export class BindingsComponent {
-  searchQuery = 'Search…';
+  helloWorldText = 'Hello World!';
+  price = 100;
 }

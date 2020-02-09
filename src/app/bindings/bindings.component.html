@@ -1,14 +1,17 @@
 <h2>Data Binding</h2>
-<div>{{ searchQuery }}</div>
+<div>{{ helloWorldText }}</div>
 
 <h2>Input and Output Bindings</h2>
-<input type="text" [value]="searchQuery" (input)="searchQuery = $event.target.value">
+<input [value]="helloWorldText" (input)="helloWorldText = $event.target.value" />
 
 <h2>Two-way Binding</h2>
-<input type="text" [(ngModel)]="searchQuery">
+<input [(ngModel)]="helloWorldText" />
+
+<h2>Value Before Pipe</h2>
+<div>{{ price }}</div>
 
 <h2>Pipe</h2>
-<div>{{ 100 | vat }}</div>
+<div>{{ price | vat }}</div>
 
 <h2>Combined Pipes</h2>
-<div>{{ 100 | vat | currency:'EUR' }}</div>
+<div>{{ price | vat | currency:'EUR' }}</div>
