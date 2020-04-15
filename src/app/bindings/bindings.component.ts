@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './bindings.component.html',
 })
 export class BindingsComponent {
-  helloWorldText = 'Hello World!';
-  price = 100;
+  public helloWorldText = 'Hello World!';
+  public price = 100;
 }

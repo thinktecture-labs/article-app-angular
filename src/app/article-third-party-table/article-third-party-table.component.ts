@@ -8,7 +8,7 @@ import { ArticleService } from '../services/article.service';
 })
 export class ArticleThirdPartyTableComponent implements OnInit {
   public articles: Article[];
-  public displayedColumns = ['title', 'manufacturer', 'price'];
+  public readonly displayedColumns = ['title', 'manufacturer', 'price'];
 
   constructor(private readonly articleService: ArticleService) {
   }

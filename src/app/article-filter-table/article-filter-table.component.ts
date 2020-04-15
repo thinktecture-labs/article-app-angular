@@ -9,7 +9,7 @@ import { ArticleService } from '../services/article.service';
   templateUrl: './article-filter-table.component.html',
 })
 export class ArticleFilterTableComponent implements OnInit {
-  public searchQueryUpdated = new BehaviorSubject('');
+  public readonly searchQueryUpdated = new BehaviorSubject('');
   public articles$: Observable<Article[]>;
 
   constructor(private readonly articleService: ArticleService) { }
